@@ -149,7 +149,8 @@ The energy storage block of this model includes 96 kWhs of battery storage, whic
 MORE ON THIS SECTION TBD
 
 
-References:
+**References**
+
 [1] Nguyen, X.H., Nguyen, M.P. Mathematical modeling of photovoltaic cell/module/arrays with tags in Matlab/Simulink. Environ Syst Res 4, 24 (2015). https://doi.org/10.1186/s40068-015-0047-9
 
 [2] Glenn Research Center presentation.
