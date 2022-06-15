@@ -143,7 +143,9 @@ The primary form of electricity in space is direct current (DC), which will like
 DC/DC converters contain semiconducting materials. Typical converters use narrow bandgap semiconductor materials such as silicon, which has a bandgap of about 1-1.5 eV. Semiconductors for space applications, on the other hand, use wide bandgap (WBG) semiconductors that have bandgaps of about 2 eV or more. WBG semiconductors are one of the leading contenders for next-generation devices for general semiconductor use because they permit devices to operate at much higher voltages, frequencies, and temperatures than conventional semiconductor materials. They can also operate at higher currents due to their higher inherent critical field densities, so their use enables higher power density. Materials that fall in this category include Gallium Nitride (GaN), Copper Oxide (Cu2O), and Zinc Telluride (ZnTe). WBG semiconductors can operate at higher switching frequencies, which leads to a higher operating efficiency. Faster switching speed also enables faster converter controls, which tend to have time constants of about 10x slower than the converter switching speed. For example, a boost converter with 1 MHz switching speed might be controlled by a PI controller that operates at 100 kHz. For the purposes of this simulation, the switching speed is not of great importance, so converters in this model are set to switch at 1 kHz for the purpose of computational speed.
 
 **Storage**
+
 The energy storage block of this model includes 96 kWhs of battery storage, which is controlled by two converters - a buck converter for charging and a boost converter for discharging - both of which are controlled by two PI controllers. The PI controllers were tuned similarly to the one controlling the buck converter in the PV block.
+
 MORE ON THIS SECTION TBD
 
 
