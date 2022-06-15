@@ -1,6 +1,7 @@
 # lunarMG
 
 **System Overview**
+
 What is described here is a Simulink simulation of a DC microgrid containing a PV array, MPPT controller, boost converter, buck converter, battery storage, and a variety of loads. The system is currently a single islanded microgrid with conventional device-level droop controls, but future iterations could feature a network of DC microgrids with higher levels of supervisory controls, with an optimal layer and an adaptive layer, as well as predictive, preventative, mitigative, and restorative mechanisms. The current ‘naive’ control regime is meant to display the impact of strictly device-level controls on the DC microgrid under normal operating conditions, load switching, and short circuit conditions. The system was simulated in MATLAB Simulink (version 2022a), which is a platform commonly used in the electrical engineering industry and is currently being used for microgrid simulation at Glenn Research Center. The simulation can be executed by downloading all files on your local machine and running an M-File named “lunar_MG_scenarios.m”, which will run four distinct scenarios that could occur on the moon due to various environmental hazards - including a base scenario, loss of half the PV system, a line-to-line fault at the PV system, and a line-to-line fault at the load side of the system. Each scenario runs with Earth conditions for irradiance and temperature, and then with Lunar conditions, which introduces additional instability into the system. 
 
 **How to Use This Model**
