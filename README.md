@@ -144,13 +144,12 @@ DC/DC converters contain semiconducting materials. Typical converters use narrow
 
 **Storage**
 
-The energy storage block of this model includes 96 kWhs of battery storage, which is controlled by two converters - a buck converter for charging and a boost converter for discharging - both of which are controlled by two PI controllers. The PI controllers were tuned similarly to the one controlling the buck converter in the PV block.
-
-MORE ON THIS SECTION TBD
-
+The energy storage block of this model includes 96 kWhs of battery storage, which is controlled by two converters - a buck converter for charging and a boost converter for discharging - both of which are controlled by two PI controllers. The PI controllers were tuned similarly to the one controlling the buck converter in the PV block. Like the PV array converters, the boost and buck bidirectional converters operate at a switching speed of 5 kHz due to fewer parasitic losses at this level. The way the charging logic operates is that if the current reference is negative then the switch will connect to the PWM signal from the boost converter and the battery will discharge. When the current is positive the switch will connect to the buck converter and the battery will charge. This part of the microgrid is based on work in [3].
 
 **References**
 
 [1] Nguyen, X.H., Nguyen, M.P. Mathematical modeling of photovoltaic cell/module/arrays with tags in Matlab/Simulink. Environ Syst Res 4, 24 (2015). https://doi.org/10.1186/s40068-015-0047-9
 
 [2] Glenn Research Center presentation.
+
+[3] Saleh, Mahmoud, et al. "Design and implementation of CCNY DC microgrid testbed." 2016 IEEE industry applications society annual meeting. IEEE, 2016.
