@@ -46,26 +46,26 @@ temp_E = Temp;
 disp('Running models with Earth conditions:')
 
 disp('Running base model.')
-sim('models\base_model.slx','StartTime','0','StopTime','1');
+sim('models\base_model.slx','StartTime','0','StopTime','10');
 time = ans.ScopeData.time(101:end);
 vpv_base_E = ans.ScopeData.signals(1).values(101:end);
 ppv_base_E = ans.ScopeData.signals(2).values(101:end);
 vload_base_E = ans.ScopeData.signals(4).values(101:end);
 
 disp('Running Scenario 1.')
-sim('models\half_PV_fail.slx','StartTime','0','StopTime','1')
+sim('models\half_PV_fail.slx','StartTime','0','StopTime','10')
 vpv_1E = ans.ScopeData1.signals(1).values(101:end);
 ppv_1E = ans.ScopeData1.signals(2).values(101:end);
 vload_1E = ans.ScopeData1.signals(4).values(101:end);
 
 disp('Running Scenario 2.')
-sim('models\PV_fault.slx','StartTime','0','StopTime','1')
+sim('models\PV_fault.slx','StartTime','0','StopTime','10')
 vpv_2E = ans.ScopeData2.signals(1).values(101:end);
 ppv_2E = ans.ScopeData2.signals(2).values(101:end);
 vload_2E = ans.ScopeData2.signals(4).values(101:end);
 
 disp('Running Scenario 3.')
-sim('models\load_fault.slx','StartTime','0','StopTime','1')
+sim('models\load_fault.slx','StartTime','0','StopTime','10')
 vpv_3E = ans.ScopeData3.signals(1).values(101:end);
 ppv_3E = ans.ScopeData3.signals(2).values(101:end);
 vload_3E = ans.ScopeData3.signals(4).values(101:end);
@@ -107,25 +107,25 @@ temp_L = Temp;
 disp('Running models with Lunar conditions:')
 
 disp('Running base model.')
-sim('models\base_model.slx','StartTime','0','StopTime','1');
+sim('models\base_model.slx','StartTime','0','StopTime','10');
 vpv_base_L = ans.ScopeData.signals(1).values(101:end);
 ppv_base_L = ans.ScopeData.signals(2).values(101:end);
 vload_base_L = ans.ScopeData.signals(4).values(101:end);
 
 disp('Running Scenario 1.')
-sim('models\half_PV_fail.slx','StartTime','0','StopTime','1')
+sim('models\half_PV_fail.slx','StartTime','0','StopTime','10')
 vpv_1L = ans.ScopeData1.signals(1).values(101:end);
 ppv_1L = ans.ScopeData1.signals(2).values(101:end);
 vload_1L = ans.ScopeData1.signals(4).values(101:end);
 
 disp('Running Scenario 2.')
-sim('models\PV_fault.slx','StartTime','0','StopTime','1')
+sim('models\PV_fault.slx','StartTime','0','StopTime','10')
 vpv_2L = ans.ScopeData2.signals(1).values(101:end);
 ppv_2L = ans.ScopeData2.signals(2).values(101:end);
 vload_2L = ans.ScopeData2.signals(4).values(101:end);
 
 disp('Running Scenario 3.')
-sim('models\load_fault.slx','StartTime','0','StopTime','1')
+sim('models\load_fault.slx','StartTime','0','StopTime','10')
 vpv_3L = ans.ScopeData3.signals(1).values(101:end);
 ppv_3L = ans.ScopeData3.signals(2).values(101:end);
 vload_3L = ans.ScopeData3.signals(4).values(101:end);
